@@ -25,6 +25,7 @@ Create a disabler config in your project:
 ```jsonc
 // .opencode/disabler.jsonc
 {
+  "$schema": "https://raw.githubusercontent.com/devxoul/opencode-disabler/main/schema.json",
   "plugins": ["oh-my-opencode", "vibe-haptic"],
   "skills": ["some-skill"]
 }
