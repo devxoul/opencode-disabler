@@ -9,7 +9,7 @@ Add to your global config (`~/.config/opencode/opencode.jsonc`):
 ```jsonc
 {
   "plugin": [
-    "opencode-disabler@1.1.0",
+    "opencode-disabler@1.1.1",
     "oh-my-opencode@3.11.2",
     "vibe-haptic@1.1.0"
   ]
