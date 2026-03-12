@@ -5,7 +5,7 @@ import type { Hooks, Plugin } from '@opencode-ai/plugin'
 
 const NOOP_MODULE = 'export const Disabled = async () => ({})'
 
-const CONFIG_FILES = ['.opencode/opencode.jsonc', '.opencode/opencode.json', 'opencode.jsonc', 'opencode.json']
+const CONFIG_FILES = ['.opencode/disabler.jsonc', '.opencode/disabler.json']
 
 function stripJsonComments(text: string): string {
   let result = ''
@@ -62,8 +62,8 @@ function readConfig(directory: string): DisablerConfig {
     try {
       const raw = readFileSync(fullPath, 'utf-8')
       const config = JSON.parse(stripJsonComments(raw))
-      const plugins = readStringArray(config.disabled_plugins)
-      const skills = readStringArray(config.disabled_skills)
+      const plugins = readStringArray(config.plugins)
+      const skills = readStringArray(config.skills)
       if (plugins.length > 0 || skills.length > 0) {
         return { plugins, skills }
       }

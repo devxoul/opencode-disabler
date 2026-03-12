@@ -20,13 +20,13 @@ Add to your global config (`~/.config/opencode/opencode.jsonc`):
 
 ## Usage
 
-Add `disabled_plugins` and/or `disabled_skills` to your project's OpenCode config:
+Create a disabler config in your project:
 
 ```jsonc
-// .opencode/opencode.jsonc
+// .opencode/disabler.jsonc
 {
-  "disabled_plugins": ["oh-my-opencode", "vibe-haptic"],
-  "disabled_skills": ["some-skill"]
+  "plugins": ["oh-my-opencode", "vibe-haptic"],
+  "skills": ["some-skill"]
 }
 ```
 
@@ -34,10 +34,8 @@ Restart OpenCode. The listed plugins and skills are disabled immediately.
 
 The config is read from the first file found in this order:
 
-1. `.opencode/opencode.jsonc`
-2. `.opencode/opencode.json`
-3. `opencode.jsonc`
-4. `opencode.json`
+1. `.opencode/disabler.jsonc`
+2. `.opencode/disabler.json`
 
 ## How it works
 
